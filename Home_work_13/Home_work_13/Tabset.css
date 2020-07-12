@@ -1,0 +1,37 @@
+#container .title.tabset{
+    display: inline-block;
+    cursor: pointer;
+    padding: 15px;
+    position: relative;
+    background: #6c45b3;
+    color: #fff;
+    border: 3px solid #909090;
+    border-radius: 5px 5px 0 0;
+    font-size: 1.5em;
+    font-family: fantasy;
+    transition: all 0.5s ease;
+}    
+
+#container .selected.tabset {
+    border: 1px solid #a9a9a9;
+    border-bottom: 3px solid #a9a9a9;
+    border-radius: 5px 5px 0 0;
+    background-color: #a9a9a9;
+    color: rgb(0, 0, 0);
+}
+
+#container .body.tabset {
+    padding: 20px;     
+    border: 3px solid #a9a9a9;
+    position: relative;
+    top: -3px;
+    border-radius: 0 0 5px 5px;
+}
+
+#container .hided {
+    display: none;
+}
+
+#container .visible {
+    display: block;
+}

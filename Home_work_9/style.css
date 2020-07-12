@@ -1,0 +1,37 @@
+
+#userInput {
+    background-color: rgb(173, 241, 241);
+    border-color: rgb(217, 250, 250);
+    border-radius: 10px;
+    width: 250px;
+    height: 20px;
+    padding-left: 10px;
+    outline: none;
+}
+
+#addBtn {
+    background-color: rgb(173, 241, 241);
+    border-color: rgb(217, 250, 250);
+    border-radius: 10px;
+    width: 150px;
+    height: 26px;
+    outline: none;
+}
+.toDo {
+    background-color: rgb(255, 255, 61);    
+}
+
+.done {
+    background-color: rgb(66, 240, 66);
+}
+
+.remove {
+    position: absolute;
+    right: 0px;
+    border-radius: 50%;
+    font-size: 50%;
+    width: 20px;
+    height: 19px;
+    background-color: rgb(173, 241, 241);
+    border-color: rgb(217, 250, 250);
+}
