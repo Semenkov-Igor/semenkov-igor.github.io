@@ -18,10 +18,10 @@ function getData() {
 }
 
 function renderData(data) {
-    stickersList.innerHTML = data.map(generateHtml).join('\n');
+    stickersList.innerHTML = data.map(getSticker).join('\n');
 }
 
-function generateHtml(sticker) {
+function getSticker(sticker) {
     return stickerTemplate
         .replace('{{title}}', sticker.description)
         .replace('{{id}}', sticker.id)
@@ -58,21 +58,22 @@ function onStickersListClick(event) {
 }
 
 function onStickerAreaFocusOut(event) {
-    const element = event.target;
-    console.log(element.name)
-    if (element.classList.contains(USERINPUT_CLASS)) {
-        updateSticker(
-            element,
-            element.value,
-            element.parentElement.dataset.stickerId
-        );
+    if (event.target.classList.contains(USERINPUT_CLASS)) {
+        const stickerId = event.target.parentElement.dataset.stickerId;
+        const value = event.target.value;
+        let sticker;
+        fetch(STICKERS_URL + '/' + stickerId)
+            .then((res) => res.json())
+            .then((data) => {
+                sticker = data;
+                sticker.description = value;
+                updateSticker(sticker)
+            })
     };
 }
 
-function updateSticker(sticker, value, id) {
-    sticker.description = value;
-
-    fetch(STICKERS_URL + '/' + id, {
+function updateSticker(sticker) {
+    fetch(STICKERS_URL + '/' + sticker.id, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
