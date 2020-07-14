@@ -1,3 +1,5 @@
+let baseValue = 0;
+
 module.exports = {
     set: function (argument) {
         return baseValue = argument;
