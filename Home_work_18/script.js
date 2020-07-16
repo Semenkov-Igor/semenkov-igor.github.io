@@ -51,10 +51,9 @@ function createTask() {
 function toggleClass(e) {
     console.log(e);
     $(this).toggleClass('done');
-    const taskId = $(e.target).closest('.task').data('id');
-    let task;
-    console.log(taskId);
-    fetch(TODOS_URL + '/' + taskId)
+    const $taskId = $(e.target).closest('.task').data('id');
+    console.log($taskId);
+    fetch(TODOS_URL + '/' + $taskId)
         .then((res) => res.json())
         .then((data) => (task = data))
         .then(updateStatus);
@@ -78,10 +77,10 @@ function updateStatus(task) {
 function deleteItem(e) {
     e.stopPropagation();
     console.log(e);
-    const element = $(e.target).closest('.task');
-    const taskId = $(e.target).closest('.task').data('id');
-    element.remove();
-    deleteTask(taskId);
+    const $element = $(e.target).closest('.task');
+    const $taskId = $element.data('id');
+    $element.remove();
+    deleteTask($taskId);
 };
 
 function deleteTask(taskId) {
