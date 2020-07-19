@@ -9,8 +9,8 @@ function copyHtml() {
 
 function copyJs() {
     return src('./src/js/*js')
-        .pipe(uglify())
         .pipe(concat('all.js'))
+        .pipe(uglify())
         .pipe(dest('./dist/'));
 }
 
@@ -22,8 +22,8 @@ function copyVendors() {
 
 function copyCss() {
     return src('./src/*css')
-        .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(concat('all.css'))
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(dest('./dist/'));
 }
 
