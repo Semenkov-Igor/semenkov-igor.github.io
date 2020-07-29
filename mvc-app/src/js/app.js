@@ -1,4 +1,5 @@
 $(() => {
+    console.log('Hi, MAN! How are you?');
     const $addButton = $('#addBtn');
     const $userInput = $('#userInput');
     const $toDoList = $('#toDoList');
