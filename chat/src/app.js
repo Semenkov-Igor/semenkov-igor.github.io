@@ -34,7 +34,7 @@ $(() => {
         <em>${message.payload.message}</em></div>`);
     };
 
-    let message = {
+    const message = {
         type: 'message',
         payload: {
             username: '',
