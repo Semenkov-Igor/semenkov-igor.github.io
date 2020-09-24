@@ -1,16 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>   
-    <link rel="stylesheet" href="style.css">
-    <script src="./script.js"></script>    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MyWebsite</title>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <input type="number" id="topPosition">
-    <input type="number" id="leftPosition">
-    <button id="addBtn">ADD</button>
+    <header class="header">
+        <a class="header-logo" href="index.html">
+            <!-- <span class="logo-text">My</span><span class="highlight">Website</span> -->
+            <span class="logo-text">MyWebsite</span>
+        </a>
+        <ul id="menu-header" class="menu">
+            <li><a href="#about-me" class="nav-li">Обо мне</a></li>
+            <li><a href="#education" class="nav-li">Образование</a></li>
+            <li><a href="#courses" class="nav-li">Курсы</a></li>
+            <li><a href="#skills" class="nav-li">Навыки</a></li>
+            <li><a href="#resume" class="nav-li">Резюме</a></li>
+            <li><a href="#contacts" class="nav-li">Контакты</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section id="main-header" class="main-header">
+            <div class="container">
+                <div class="about-me-text">
+                    <h2 class="greeting">ПРИВЕТ. Я ИГОРЬ СЕМЕНЬКОВ</h2>
+                    <h2 class="position">Front-End Developer</h2>
+                </div>
+                <div class="my-photo">
+                    <img class="cart1" src="img/my-photo.png" alt="Игорь Семеньков" width="280">
+                </div>
+            </div>
+        </section>
+
+        <section id="about-me" class="about-me">
+            <h2 class="about-me-head">Обо мне</h2>
+            <div class="container">
+                <div class="about-me-text">                    
+                    <p>
+                        Имею опыт работы как в больших компаниях (банковская сфера), так и в частном
+                        секторе. Будучи последние 5 лет директором небольшой компании, сделал вывод, что
+                        главным в любой профессии является сотрудничество и эффективное взаимодействие с
+                        людьми.
+                    </p>
+                    <p>
+                        К работе подхожу ответственно, с соблюдением дедлайнов и точностью в деталях.
+                        Не боюсь трудностей, довожу начатое до конца.
+                    </p>
+                    <p>
+                        Имею огромное желание работать в компании, где есть возможности для
+                        профессионального и интеллектуального развития.
+                    </p>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="education" class="education">
+            <h2 class="education-head">Образование</h2>
+            <div class="container">
+                <div class="first-education">
+                    <h2>ВЫСШЕЕ ТЕХНИЧЕСКОЕ</h2>
+                    <p class="academy">НМетАУ (2001-2006)</p>
+                    <p>Национальная металлургическая академия Украины. Электрометаллургический факультет. Специальность
+                        -
+                        Специальная металлургия</p>
+                </div>
+                <div class="second-education">
+                    <h2>ВЫСШЕЕ ЭКОНОМИЧЕСКОЕ</h2>
+                    <p class="academy">НметАУ (2008-2010)</p>
+                    <p>Национальная металлургическая академия Украины. Факультет экономики и менеджмента. Специальность
+                        -
+                        Менеджмент внешнеэкономической деятельности</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="courses" class="courses">
+            <h2 class="courses-head">Курсы</h2>
+            <div class="container">
+                <div class="course-description">
+                    <h2>Front-End Basic</h2>
+                    <a target="_blank" href="https://certificate.ithillel.ua/view/33154696/ru">
+                        <img class="cart" src="img/basic.png" alt="hillel" width="400px">
+                    </a>
+                </div>
+                <div class="course-description">
+                    <h2>Front-End Pro</h2>
+                    <a target="_blank" href="https://certificate.ithillel.ua/view/68322924/ru">
+                        <img class="cart" src="img/pro.png" alt="hillel" width="400px">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2 class="skills-head">Навыки</h2>
+            <ul class="skills-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+                <li>jQuery-UI</li>
+                <li>Bootstrap 4</li>
+                <li>Gulp</li>
+                <li>Webpack</li>
+            </ul>
+        </section>
+
+        <section id="resume" class="resume">
+            <h2 class="resume-head">Резюме</h2>
+            <button class="download"><span>Скачать</span></button>
+        </section>
+
+        <section id="contacts" class="contacts">
+            <h2 class="contacts-head">Контакты</h2>
+            <ul class="contacts-list">
+                <li>phone: +38 (050) 480-38-46</li>
+                <li>e-mail: semenkov.box@gmail.com</li>
+                <li>Telegram: @IgorSemenkov</li>
+                <li>LinkedIn: @IgorSemenkov</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2020</p>
+    </footer>
 </body>
+
 </html>
