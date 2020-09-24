@@ -1,1 +1,298 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  color: #FFFFFF;
+  position: relative;
+  background-color: #212121;
+}
 
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;  
+} */
+
+.header {
+  margin-bottom: 30px;  
+  background-color: #292929;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* width: 100%; */
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+
+.logo-text, .position {
+  background: linear-gradient(to right, #ff8b07, #d81b5b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.greeting {
+  font-size: 25px;
+  font-weight: lighter;
+  color: #FFFFFF;
+}
+
+.position {
+  font-size: 60px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {    
+  list-style: none;
+  margin: 10px; 
+}
+
+.nav-li:hover {
+  color: #b9b9b9;
+}
+
+.nav-li {
+  display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+ul {    
+  display: flex;   
+  font-size: 20px;
+  padding-left: 0px;
+  margin: 0;
+}
+
+.course-description {
+  box-shadow: 0px 0px 10px 3px rgb(255 255 255);
+  opacity: 0.8;
+  transition: all 0.2s ease;
+  margin: 20px;
+}
+
+.course-description:hover {
+  opacity: 1;
+  box-shadow: 0px 0px 20px 5px rgb(255 255 255);
+}
+
+.education-head, .skills-head, .courses-head, .resume-head, .about-me-head, .contacts-head {
+  font-size: 35px;
+  color: #eb5330;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.education, .skills, .contacts, .about-me, .courses, .resume, .main-header {
+  background-color: #292929;
+  border-radius: 10px;
+  padding-top: 10px;
+}
+
+p {
+  color: white;
+}
+
+.academy {
+  color: #eb5330;
+  font-size: 25px;
+}
+
+.about-me {
+  font-size: 20px;
+}
+
+.skills-list, .contacts-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.download {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.download span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.download span:after {
+  content: '\21D3';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.download:hover span {
+  padding-right: 25px;
+}
+
+.download:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.resume {
+  margin-bottom: 30px;
+}
+
+footer {
+  height: 75px;  
+}
+
+.first-education:before {
+  content: "";
+  width: 150px;
+  height: 150px;
+  display: block;
+  background: #ff8b07 url(img/metallurgy.png) no-repeat 50% 50%;
+  background-size: 75px auto;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.second-education:before {
+  content: "";
+  width: 150px;
+  height: 150px;
+  display: block;
+  background: #ff8b07 url(img/management.png) no-repeat 50% 50%;
+  background-size: 75px auto;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+@media (min-width: 320px) {
+  .first-education, .second-education, .my-photo, .about-me-text {
+    width: 100%;
+  }
+
+  .cart {
+    width: 320px;
+  }
+
+  .my-photo, .position {
+    margin: 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  .first-education, .second-education, .my-photo {
+    width: 40%;
+    margin: 30px;
+  } 
+
+  .advertising-box {
+    width: 30%;
+    order: 0;
+  }
+  
+  .main-section {
+    width: 70%;
+  }
+
+  .my-photo {
+    margin: 0px;
+  }
+
+  .about-me-text {
+    width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  .first-education, .second-education {
+    width: 40%;
+    margin: 20px;
+  }
+
+  .cart {
+    width: 400px;
+  }
+
+  .my-photo {
+    margin: 0px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header,
+  main,
+  footer {
+    width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .about-me-text {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .position {
+    margin-top: 0px;
+  }
+
+  .header {
+    margin-top: 30px;
+  }
+
+  .my-photo {
+    width: 30%;
+    margin: 0px;
+  }
+}
