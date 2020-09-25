@@ -16,13 +16,6 @@ body {
   text-align: center;
 }
 
-/* header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 100%;  
-} */
-
 .header {
   margin-bottom: 30px;  
   background-color: #292929;
@@ -30,7 +23,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  /* width: 100%; */
 }
 
 .menu {
@@ -93,19 +85,19 @@ ul {
   margin: 0;
 }
 
-.course-description {
+.course-description, .portfolio-description {
   box-shadow: 0px 0px 10px 3px rgb(255 255 255);
-  opacity: 0.8;
+  opacity: 0.9;
   transition: all 0.2s ease;
   margin: 20px;
 }
 
-.course-description:hover {
+.course-description:hover, .portfolio-description:hover {
   opacity: 1;
   box-shadow: 0px 0px 20px 5px rgb(255 255 255);
 }
 
-.education-head, .skills-head, .courses-head, .resume-head, .about-me-head, .contacts-head {
+.education-head, .skills-head, .courses-head, .portfolio-head, .resume-head, .about-me-head, .contacts-head {
   font-size: 35px;
   color: #eb5330;
   font-family: 'Open Sans', sans-serif;
@@ -119,7 +111,7 @@ ul {
   margin-bottom: 30px;
 }
 
-.education, .skills, .contacts, .about-me, .courses, .resume, .main-header {
+.education, .skills, .contacts, .about-me, .portfolio, .courses, .resume, .main-header {
   background-color: #292929;
   border-radius: 10px;
   padding-top: 10px;
