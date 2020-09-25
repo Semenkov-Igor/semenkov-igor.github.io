@@ -185,7 +185,7 @@ $(() => {
 
     function getFormData() {
         let product = {};
-        $inputs.each((el) => {
+        $inputs.each((i, el) => {
             product[el.name] = el.value;
         });
 
