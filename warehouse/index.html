@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./app.js"></script>
+</head>
+
+<body>
+    <div id="product-contain" class="ui-widget">
+        <div class="header">
+            <h1>Товарный запас:</h1>
+            <button id="createProduct">Создать новую позицию</button>
+        </div>
+        <table id="products" class="ui-widget ui-widget-content">
+            <thead>
+                <tr class="ui-widget-header ">
+                    <th>Наименование</th>
+                    <th>Диаметр (мм)</th>
+                    <th>Вес (кг)</th>
+                    <th>Торговая марка</th>
+                    <th>Остаток (шт)</th>
+                    <th>Действие</th>
+                </tr>
+            </thead>
+            <tbody id="productList"></tbody>
+        </table>
+
+    </div>
+
+    <div id="dialogForm" title="Редактирование позиции">
+        <p class="validateTips">Заполните все поля формы</p>
+
+        <form id="productForm">
+            <fieldset>
+                <label for="name">Наименование</label>
+                <input type="hidden" name="id" id="id" class="text ui-widget-content ui-corner-all">
+                <input type="text" name="name" id="name" placeholder="Ом"
+                    class="text ui-widget-content ui-corner-all">
+                <label for="diameter">Диаметр</label>
+                <input type="text" name="diameter" id="diameter" placeholder="0,8"
+                    class="text ui-widget-content ui-corner-all">
+                <label for="weight">Вес</label>
+                <input type="text" name="weight" id="weight" placeholder="5,0"
+                    class="text ui-widget-content ui-corner-all">
+                <label for="trademark">Торговая марка</label>
+                <input type="text" name="trademark" id="trademark" placeholder="Gefest"
+                    class="text ui-widget-content ui-corner-all">
+                <label for="balance">Остаток</label>
+                <input type="text" name="balance" id="balance" placeholder="100"
+                    class="text ui-widget-content ui-corner-all">
+
+                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+            </fieldset>
+        </form>
+    </div>
+    
+    <script type="text/template" id="productTemplate">
+        <tr class="product" data-id="{{id}}">
+            <td>{{name}}</td>
+            <td>{{diameter}}</td>
+            <td>{{weight}}</td>
+            <td>{{trademark}}</td>
+            <td>{{balance}}</td>
+            <td>
+                <button type="button" class="action" data-btn="sum">Приход</button>
+                <button type="button" class="action" data-btn="sub">Расход</button>
+                <button type="button" class="edit-btn">Редактировать</button>
+                <button type="button" class="delete-btn">Удалить</button>
+            </td>
+        </tr>
+    </script>
+</body>
+
+</html>
