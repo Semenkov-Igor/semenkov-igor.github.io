@@ -86,7 +86,7 @@ ul {
 }
 
 .course-description, .portfolio-description {
-  box-shadow: 0px 0px 10px 3px rgb(255 255 255);
+  box-shadow: 0px 0px 10px 3px white;
   opacity: 0.9;
   transition: all 0.2s ease;
   margin: 20px;
@@ -94,7 +94,7 @@ ul {
 
 .course-description:hover, .portfolio-description:hover {
   opacity: 1;
-  box-shadow: 0px 0px 20px 5px rgb(255 255 255);
+  box-shadow: 0px 0px 20px 5px white;
 }
 
 .education-head, .skills-head, .courses-head, .portfolio-head, .resume-head, .contacts-head {
