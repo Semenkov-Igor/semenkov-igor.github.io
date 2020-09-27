@@ -97,7 +97,7 @@ ul {
   box-shadow: 0px 0px 20px 5px rgb(255 255 255);
 }
 
-.education-head, .skills-head, .courses-head, .portfolio-head, .resume-head, .about-me-head, .contacts-head {
+.education-head, .skills-head, .courses-head, .portfolio-head, .resume-head, .contacts-head {
   font-size: 35px;
   color: #eb5330;
   font-family: 'Open Sans', sans-serif;
@@ -111,7 +111,7 @@ ul {
   margin-bottom: 30px;
 }
 
-.education, .skills, .contacts, .about-me, .portfolio, .courses, .resume, .main-header {
+.education, .skills, .contacts, .portfolio, .courses, .resume, .main-header {
   background-color: #292929;
   border-radius: 10px;
   padding-top: 10px;
@@ -124,10 +124,6 @@ p {
 .academy {
   color: #eb5330;
   font-size: 25px;
-}
-
-.about-me {
-  font-size: 20px;
 }
 
 .skills-list, .contacts-list {
